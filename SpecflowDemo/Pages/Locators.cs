@@ -8,7 +8,7 @@ namespace SpecflowDemo.Pages
 {
      public class Locators :SeleniumDriver
     {
-        //public IWebDriver driver { get; }
+        public IWebDriver driver { get; }
       
 
         //UI Elements
