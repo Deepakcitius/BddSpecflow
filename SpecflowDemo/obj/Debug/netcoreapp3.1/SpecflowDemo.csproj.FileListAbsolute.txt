@@ -106,7 +106,6 @@ C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\bin\Debug\netcoreapp3.1\zh-H
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.csproj.AssemblyReference.cache
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.AssemblyInfoInputs.cache
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.AssemblyInfo.cs
@@ -115,3 +114,4 @@ C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\Spec
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.dll
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.pdb
 C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.genruntimeconfig.cache
+C:\Users\Abc\source\repos\SpecflowDemo\SpecflowDemo\obj\Debug\netcoreapp3.1\SpecflowDemo.csproj.AssemblyReference.cache

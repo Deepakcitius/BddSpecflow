@@ -13,19 +13,16 @@ using TechTalk.SpecFlow.Assist;
 namespace SpecflowDemo.Steps
 {
     [Binding]
-    public sealed class LoginSteps
+    public  class LoginSteps :SeleniumDriver
     {
-        Locators loc = null;
-        SeleniumDriver Driver = new SeleniumDriver();
-        public IWebDriver drivers { get; }
+        Locators loc = new Locators();
+        //SeleniumDriver Driver = new SeleniumDriver();
+        //public IWebDriver drivers { get; }
         [Given(@"I Launch the application")]
         public void GivenILaunchTheApplication()
         {
-            Console.WriteLine("Selenium webdriver launching the application");
-            IWebDriver driver = Driver.Setup("chrome");
-            //loc = new Pages.Locators(driver);
-           // driver.Navigate().GoToUrl("http://eaapp.somee.com/");
-            //driver.Manage().Window.Maximize();
+            Console.WriteLine("Selenium webdriver already launched the application");
+            
         }
 
         [Given(@"I click login link")]
@@ -54,6 +51,37 @@ namespace SpecflowDemo.Steps
             Assert.That(loc.IsEmployeeDetailsExist(), Is.True);
         }
 
+        // Second Test 
+        [Given(@"I Launch the app")]
+        public void GivenILaunchTheApp()
+        {
+            Console.WriteLine("Selenium webdriver already launched the application");
+        }
+
+        [Given(@"I click login")]
+        public void GivenIClickLogin()
+        {
+            loc.Clicklogin();
+        }
+
+        [Given(@"Enter the Following")]
+        public void GivenEnterTheFollowing(Table table)
+        {
+            dynamic data = table.CreateDynamicInstance();
+            loc.Login((string)data.Username, (string)data.Password);
+        }
+
+        [Given(@"Click login")]
+        public void GivenClickLogin()
+        {
+            loc.ClickloginButton();
+        }
+
+        [Then(@"I Should see Employee details")]
+        public void ThenIShouldSeeEmployeeDetails()
+        {
+            Assert.That(loc.IsEmployeeDetailsExist(), Is.True);
+        }
 
 
     }

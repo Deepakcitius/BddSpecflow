@@ -13,5 +13,18 @@ Scenario: Perform login for EA Application Site
 
 
 
+@Regression
+Scenario: Perform login for EA 
+	Given I Launch the app
+	And I click login
+	And Enter the Following 
+	    | Username | Password |
+	    | admin    | password |
+	And Click login 
+	Then I Should see Employee details 
+
+
+
+
 
  

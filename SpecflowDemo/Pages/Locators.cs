@@ -1,23 +1,22 @@
 ﻿using OpenQA.Selenium;
+using SpecflowDemo.Drivers;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace SpecflowDemo.Pages
 {
-     public class Locators
+     public class Locators :SeleniumDriver
     {
-        public IWebDriver WebDriver { get; }
-        public Locators(IWebDriver webDriver)
-        { 
-            WebDriver = webDriver;
-        }
+        //public IWebDriver driver { get; }
+      
+
         //UI Elements
-        public IWebElement lnkLogin => WebDriver.FindElement(By.LinkText("Login"));
-        public IWebElement txtUsername => WebDriver.FindElement(By.Name("UserName"));
-        public IWebElement txtPassword => WebDriver.FindElement(By.Name("Password"));
-        public IWebElement btnLogin => WebDriver.FindElement(By.CssSelector(".btn-default"));
-        public IWebElement lnkEmployeeDetails => WebDriver.FindElement(By.LinkText("Employee Details"));
+        public IWebElement lnkLogin => driver.FindElement(By.LinkText("Login"));
+        public IWebElement txtUsername => driver.FindElement(By.Name("UserName"));
+        public IWebElement txtPassword => driver.FindElement(By.Name("Password"));
+        public IWebElement btnLogin => driver.FindElement(By.CssSelector(".btn-default"));
+        public IWebElement lnkEmployeeDetails => driver.FindElement(By.LinkText("Employee Details"));
 
         public void Clicklogin() => lnkLogin.Click();
 

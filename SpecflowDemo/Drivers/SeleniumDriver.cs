@@ -13,37 +13,18 @@ namespace SpecflowDemo.Drivers
 {
    public class SeleniumDriver
     {
-        private IWebDriver driver;
-        private readonly ScenarioContext _scenarioContext;
+        public static WebDriver? driver;
+        string Baseurl = "http://eaapp.somee.com/";
 
-        public SeleniumDriver(ScenarioContext scenarioContext) => _scenarioContext = scenarioContext;
-
-        public SeleniumDriver()
-        {
-        }
-
+       
         public IWebDriver Setup(string browsername)
         {
-            dynamic capability = Getbrowseroptions(browsername);
-            IWebDriver driver = null;
             driver = new ChromeDriver();
-            _scenarioContext.Set(driver, "WebDriver");
-            driver.Navigate().GoToUrl("http://eaapp.somee.com/");
+            driver.Navigate().GoToUrl(Baseurl);
             driver.Manage().Window.Maximize();
             return driver;
         }
-
-        public void QuitBrowserss ()
-        {
-            IWebDriver dd = Setup("chrome");
-            dd.Quit();
-           
-        }
-
-        //internal IWebDriver Setup()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        
 
         private dynamic Getbrowseroptions(string browsername)
         {

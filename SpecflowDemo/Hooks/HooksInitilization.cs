@@ -9,34 +9,20 @@ using TechTalk.SpecFlow;
 namespace SpecflowDemo.Hooks
 {
     [Binding]
-    public sealed class HooksInitilization
+    public sealed class HooksInitilization : SeleniumDriver
     {
-       // SeleniumDriver Driver = new SeleniumDriver();
-        // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
-        private readonly ScenarioContext _scenariocontext;
-        //public IWebDriver drivers { get; }
-        public HooksInitilization(ScenarioContext scenarioContext) => _scenariocontext = scenarioContext;
-
         [BeforeScenario]
         public void BeforeScenario()
         {
-            SeleniumDriver seleniumdriver = new SeleniumDriver(_scenariocontext);
-            _scenariocontext.Set(seleniumdriver, "Seleniumdriver");
-            //IWebDriver driver = Driver.Setup("chrome");
-            //driver.Navigate().GoToUrl("http://eaapp.somee.com/");
-            //driver.Manage().Window.Maximize();
-
-
+            Console.WriteLine("Launching the browser");
+            Setup("chrome");
         }
 
         [AfterScenario]
         public void AfterScenario()
         {
-            Console.WriteLine("Selenium webdriver quit");
-            _scenariocontext.Get<IWebDriver>("WebDriver").Quit();
-            // Driver.Setup("chrome").Quit();
-
-           // Driver.QuitBrowserss();
+            Console.WriteLine("Closing the browser");
+            driver.Quit();
         }
     }
 }
