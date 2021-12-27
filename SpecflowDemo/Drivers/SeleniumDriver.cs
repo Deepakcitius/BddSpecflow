@@ -13,7 +13,7 @@ namespace SpecflowDemo.Drivers
 {
    public class SeleniumDriver
     {
-        public static WebDriver? driver;
+        public static WebDriver driver = null;
         string Baseurl = "http://eaapp.somee.com/";
 
        
